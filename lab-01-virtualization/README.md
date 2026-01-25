@@ -48,7 +48,18 @@ Screenshots are provided to demonstrate:
 - SSH connectivity confirmation  
 - Snapshot creation and restore  
 
-📁 **Screenshots:** `./screenshots/`
+## Screenshots
+- [01 – VirtualBox installed](./screenshots/01-virtualbox-installed.png)
+- [02 – VM hardware summary](./screenshots/02-vm-hardware-summary.png)
+- [03 – Network adapter (NAT)](./screenshots/03-network-adapter-nat.png)
+- [04 – Ubuntu boot menu](./screenshots/04-ubuntu-boot-menu.png)
+- [05 – Installation type](./screenshots/05-installation-type.png)
+- [06 – Network (DHCP)](./screenshots/06-network-dhcp.png)
+- [07 – Storage (LVM summary)](./screenshots/07-storage-lvm-summary.png)
+- [08 – Profile configuration](./screenshots/08-profile-configuration.png)
+- [09 – First login](./screenshots/09-first-login.png)
+- [10 – SSH enabled](./screenshots/10-ssh-enabled.png)
+- [11 – Clean install snapshot](./screenshots/11-clean-install-snapshot.png)
 
 ---
 
@@ -79,18 +90,6 @@ Compared to the sandbox labs I used previously—which were often slow and restr
 This lab also helped me properly understand snapshots. I can now see how VirtualBox snapshots are essentially the same concept as Hyper-V checkpoints, just implemented on a different platform.
 
 ---
-
-## Quick Glossary
-
-**Virtual Machine (VM)** — A software-based computer that runs inside your host system using virtual hardware (CPU/RAM/disk/network). Used to test and learn safely in an isolated environment.
-
-**Hypervisor** — The software layer that creates and runs virtual machines (e.g., VirtualBox). It manages the VM’s virtual hardware and isolates it from the host.
-
-**LVM (Logical Volume Manager)** — A Linux storage system that lets you create flexible “logical” disks on top of physical/virtual disks, making resizing and management easier than fixed partitions.
-
-**NAT (Network Address Translation)** — A networking mode where the VM can access the internet through the host while staying hidden from the local network. Good default for safer lab setups.
-
-**SSH (Secure Shell)** — An encrypted remote access protocol used to securely log into and manage Linux servers from another machine (e.g., from Windows PowerShell/Terminal).
 
 
 ## Next Steps

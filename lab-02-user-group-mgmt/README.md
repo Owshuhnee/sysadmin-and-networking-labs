@@ -30,26 +30,30 @@ The goal is to demonstrate how administrative access is controlled through group
 Role-based groups were created to separate administrative and non-administrative users.
 
 ```bash
-- sudo groupadd admins
-- sudo groupadd developers
-- getent group admins
-- getent group developers
+sudo groupadd admins
+sudo groupadd developers
+getent group admins
+getent group developers
 ```
-**Evidence:** 01-create-verify-groups.png
+**Evidence:**
+- [01-create-verify-groups](./screenshots/01-create-verify-groups.png)
+![Create and verify groups](./screenshots/01-create-verify-groups.png)
 
 
-### Task 2 — Create Groups
+### Task 2 — Create Users
 Two users were created to represent different roles.
 - jove-admin → administrative role
 - jove-dev → standard (non-admin) role
 
 ```bash
-- sudo useradd -m -s /bin/bash jove-admin
-- sudo useradd -m -s /bin/bash jove-dev
-- sudo passwd jove-admin
-- sudo passwd jove-dev
+sudo useradd -m -s /bin/bash jove-admin
+sudo useradd -m -s /bin/bash jove-dev
+sudo passwd jove-admin
+sudo passwd jove-dev
 ```
-**Evidence:** 02-create-users.png
+**Evidence:**
+- [02-create-users](./screenshots/02-create-users.png)
+![Create users](./screenshots/02-create-users.png)
 
 
 ### Task 3 — Assign Users to Groups
@@ -61,7 +65,9 @@ sudo usermod -aG developers jove-dev
 id jove-admin
 id jove-dev
 ```
-**Evidence:** 03-assign-users-to-groups.png
+**Evidence:**
+- [03-assign-users-to-groups](./screenshots/03-assign-users-to-groups.png)
+![Assign users to groups](./screenshots/03-assign-users-to-groups.png)
 
 
 ### Task 4 — Configure & Validate Sudo Access
@@ -73,8 +79,12 @@ sudo chmod 440 /etc/sudoers.d/admins
 sudo visudo -c
 ```
 **Evidence:**
-04-sudoers-admins-config.png
-05-sudoers-validate-visudo.png
+- [04-sudoers-admins-config](./screenshots/04-sudoers-admins-config.png)
+- [05-sudoers-validate-visudo](./screenshots/05-sudoers-validate-visudo.png)
+- [06-remove-admin-access](./screenshots/06-remove-admin-access.png)
+![Admins sudoers configuration](./screenshots/04-sudoers-admins-config.png)
+![Sudoers validation](./screenshots/05-sudoers-validate-visudo.png)
+![Remove unintended admin access](./screenshots/06-remove-admin-access.png)
 
 During validation, a misconfiguration was identified where the jove-dev user had unintentionally inherited administrative privileges through group membership.
 
@@ -87,28 +97,51 @@ sudo gpasswd -d jove-dev admins
 - jove-admin has full sudo access
 - jove-dev has no sudo privileges
 
-**Evidence:** 06-remove-admin-access.png
 
+### Task 5 - Shared Directory with Group-Based Access (setgid)
+A shared directory was created to allow collaborative access for the developers group while preventing access by non-members.
 
-### Task 5 - Pending
+```bash
+sudo mkdir -p /srv/devshare
+sudo chown root:developers /srv/devshare
+sudo chmod 2770 /srv/devshare
+```
+The setgid bit ensures all new files inherit the developers group.
+Access was validated by testing write permissions as a group member and as a non-member.
+
+**Evidence:**
+- [07-sudo-access-jove-admin](./screenshots/07-sudo-access-jove-admin.png)
+- [08-sudo-access-jove-dev-denied](./screenshots/08-sudo-access-jove-dev-denied.png)
+- [09-devshare-permissions](./screenshots/09-devshare-permissions.png)
+- [10-dev-write-success](./screenshots/10-dev-write-sucess.png)
+- [11-non-member-denied](./screenshots/11-non-member-denied.png)
+
+![07-sudo-access-jove-admin](./screenshots/07-sudo-access-jove-admin.png)
+![08-sudo-access-jove-dev-denied](./screenshots/08-sudo-access-jove-dev-denied.png)
+![09-devshare-permissions](./screenshots/09-devshare-permissions.png)
+![10-dev-write-success](./screenshots/10-dev-write-sucess.png)
+![11-non-member-denied](./screenshots/11-non-member-denied.png)
 
 ---
 
 ## Security Considerations
--  Pending
+- Administrative privileges are granted strictly through group membership.
+- Direct root login is avoided in favor of sudo.
+- Sudoers configuration is isolated in /etc/sudoers.d/ and validated with visudo.
+- Group-based permissions and setgid are used to control shared access without elevating privileges.
 
 ---
 
 ## Reflection
-- Pending
+This lab reinforced how Linux access control is primarily driven by group membership and permissions rather than individual users.
+
+Troubleshooting permission issues helped solidify my understanding of how misconfigurations occur and how to validate and correct them using tools such as id, sudo -l, and ls -ld. Running the lab locally in VirtualBox provided faster feedback compared to sandbox environments and made the learning process more intuitive.
 
 ---
 
-## Quick Glossary
-
-- Pending
 
 
 ## Next Steps
-- Pending
+- Practice file ownership and permission management in more depth before proceeding to Lab 3
+- Continue building Linux administration labs to strengthen troubleshooting skills
 
