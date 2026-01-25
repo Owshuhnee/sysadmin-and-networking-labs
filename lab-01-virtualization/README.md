@@ -85,7 +85,7 @@ This lab helped build my confidence working with virtual machines and Linux serv
 
 The lab also felt a bit easier because I’ve worked with Hyper-V before during my Certificate in Information Technology. I had prior experience creating both host and local virtual machines, including Windows Server 2022 environments, which made the concepts easier to follow this time around.
 
-Compared to the sandbox labs I used previously—which were often slow and restrictive—running everything locally in VirtualBox was a much smoother experience. Things clicked faster, and the overall process made more sense.
+Compared to the sandbox labs I used previously, running everything locally in VirtualBox was a much smoother experience. Things clicked faster, and the overall process made more sense.
 
 This lab also helped me properly understand snapshots. I can now see how VirtualBox snapshots are essentially the same concept as Hyper-V checkpoints, just implemented on a different platform.
 
