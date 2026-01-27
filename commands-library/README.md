@@ -6,20 +6,28 @@ These notes explain the commands I use across labs in simple terms.
 
 | Command | What it does | Explain like I'm 5 |
 |-------|--------------|--------------------|
-| `groupadd admins` | Creates a new group called `admins`. | “Make a new team called admins.” |
-| `useradd -m -s /bin/bash jove-dev` | Creates a user with a home folder and Bash shell. | “Make a new person and give them their own room.” |
-| `usermod -aG admins jove-admin` | Adds a user to the admins group without removing other groups. | “Put this person in the admins team without removing them from other teams.” |
-| `id jove-dev` | Shows a user’s ID and group memberships. | “Show me this person’s ID card.” |
-| `gpasswd -d jove-dev admins` | Removes a user from a group. | “Take this person out of the admins team.” |
 | `whoami` | Displays the current logged-in user. | “Who am I right now?” |
-| `getent group` | Displays group information from the system database. | “Show me this team and who’s in it.” |
-| `sudo groupadd <group>` | Creates a new group. | “Make a new team.” |
-| `sudo groupmod -n new old` | Renames an existing group. | “Change the team’s name without deleting it.” |
+| `useradd -m -s /bin/bash <username>` | Creates a user with a home folder and Bash shell. | “Make a new person and give them their own room.” |
+| `usermod -l <new-username> <old-username>` | Fill | Fill |
+| `usermod -aG <groupname> <username>` | Adds a user to the admins group without removing other groups. | “Put this person in the admins team without removing them from other teams.” |
+| `id <username>` | Shows a user’s ID and group memberships. | “Show me this person’s ID card.” |
+| `groupadd <groupname>` | Creates a new group called `groupname`. | “Make a new team called admins.” |
+| `gpasswd -d <username> <groupname>` | Removes a user from a group. | “Take this person out of the admins team.” |
+| `getent <group>` | Displays group information from the system database. | “Show me this team and who’s in it.” |
 
+| `groupadd <group>` | Creates a new group. | “Make a new team.” |
+| `groupmod -n <new-groupname> <old-groupname>` | Renames an existing group. | “Change the team’s name without deleting it.” |
+| `ls -ld /home/<username>` | fill | fill |
+| `getent passwd <username>` | fill | fill |
+
+## Navigation
+| Command | What it does | Explain like I'm 5 |
+|-------|--------------|--------------------|
+| `su - username` | fill | fill |
 
 
 ## Sudo & Permissions
-
+git
 | Command | What it does | Explain like I'm 5 |
 |-------|--------------|--------------------|
 | `visudo -f /etc/sudoers.d/admins` | Safely creates or edits sudo rules for the admins group. | “Carefully write the rules for who is allowed to be the boss.” |

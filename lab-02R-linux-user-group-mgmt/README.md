@@ -44,8 +44,7 @@ All access must be controlled through **groups and permissions**, not per-user e
 
 ---
 
-## Task 1 — Create Role-Based Groups (Complete)
-### Completion Date/Time - 27/01/26 12:23 AM
+## Task 1 — Group/Role Management 
 
 ### User Story
 As an administrator, I want role-based groups so permissions are managed consistently and securely.
@@ -68,7 +67,7 @@ New groups were added using the groupadd command. Existing groups updated using 
 - [x] Group IDs and memberships can be verified
 - [x] No users have unnecessary privileges
 
-### Commands used for this task
+### Commands used
 ```bash
 getent group
 sudo groupadd [groupname]
@@ -87,36 +86,45 @@ sudo groupmod -n [new-group-name] [old-group-name]
 
 ---
 
-## Task 2 — Onboard New Users (pending)
-### Completion Date/Time - 
+
+## Task 2 — User Management
 
 ### User Story
 As an administrator, I want new staff accounts created with correct group membership and secure defaults.
 
-### Users
-- **SuperAdmin** jove
-- **Sysadmins** jove-admin modify to mark-admin (to avoid confusion)
+
+### Tasks Performed
+To reduce naming confusion and better reflect role intent, I first renamed the existing administrative user `jove-admin` to `mark-admin`. During this process, I learned that Linux does **not** automatically update a user’s primary group name or home directory when a username is modified. These components must be handled separately to maintain consistency. In the screenshot I did 3-steps to complete the setup. 
+
+![Modify Admin User](./screenshots/06-modify-admin-user.png)
+
+After confirming the administrative account was correctly updated, I created additional role-based users for the environment. Each user was created with a home directory and default shell, then verified to ensure correct UID, GID, group membership, and home directory ownership.
+
 - **Developers** alex-dev
 - **QA** mika-qa
 - **Interns** sam-intern
 
-### Tasks Performed
-- Add users to the system (List above) and verify that users exits
-- Ensure that it Primary group is correct
-- Create home directory and verify it exists
-- Check and make sure users for sudo access (by user, by group)
+![Add Users](./screenshots/07-create-users-success.png)  
+![Verify Users](./screenshots/08-verify-uid-gid.png)  
+![Verify Home Directory](./screenshots/09-verify-user-home-dir.png)
+ 
 
 ### Acceptance Criteria
 - [ ] Users exist and can log in
 - [ ] Correct primary and secondary groups assigned
-- [ ] Home directories exist with correct ownership
+- [x] Home directories exist with correct ownership
 - [ ] No administrative access granted unintentionally
 
-### Evidence
-- Screenshot(s):
-- Command output(s):
+### Commands Used
+```bash
+usermod -l <new-username> <old-username>
+groupmod -n <new-groupname> <old-groupname>
+ls -ld /home/<username>
+useradd -m -s /bin/bash <username>
+getent passwd <username>
+id <username>
+```
 
----
 
 ## Task 3 — Configure Shared Directories & Permissions (pending)
 
