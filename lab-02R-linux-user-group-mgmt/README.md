@@ -49,6 +49,13 @@ All access must be controlled through **groups and permissions**, not per-user e
 ### User Story
 As an administrator, I want role-based groups so permissions can be managed consistently and securely.
 
+
+### Acceptance Criteria
+- [x] Groups exist and are visible in the system  
+- [x] Group IDs and memberships can be verified  
+- [x] No users have unnecessary privileges  
+
+
 ### Tasks Performed
 Existing role-based groups (`admins` and `developers`) were already present from the initial Lab 2 setup, so these were reused and refined rather than recreated.
 
@@ -63,10 +70,6 @@ To align with clearer role naming and least-privilege principles, the following 
 
 New groups were created using the `groupadd` command, and existing groups were renamed using the `groupmod` command.
 
-### Acceptance Criteria
-- [x] Groups exist and are visible in the system  
-- [x] Group IDs and memberships can be verified  
-- [x] No users have unnecessary privileges  
 
 ### Commands Used
 ```bash
@@ -94,8 +97,16 @@ In this task I learned how effective group naming and structure support role-bas
 
 ## Task 2 — User Management
 
+
 ### User Story
 As an administrator, I want new staff accounts created with correct group membership and secure defaults.
+
+
+### Acceptance Criteria
+- [x] Users exist and can log in
+- [x] Correct primary and secondary groups assigned
+- [x] Home directories exist with correct ownership
+- [x] No administrative access granted unintentionally
 
 
 ### Tasks Performed
@@ -118,11 +129,6 @@ Note: Attempts to elevate privileges using `sudo` and switch users using `su` we
 
 ![Sudo access](./screenshots/10-verify-sudo-access.png)
 
-### Acceptance Criteria
-- [x] Users exist and can log in
-- [x] Correct primary and secondary groups assigned
-- [x] Home directories exist with correct ownership
-- [x] No administrative access granted unintentionally
 
 ### Commands Used
 ```bash
@@ -143,20 +149,10 @@ This task showed that updating user accounts in Linux often involves multiple st
 
 ## Task 3 — Configure Shared Directories & Permissions (pending)
 
+
 ### User Story
 As a team, we need shared directories where access is granted only to the appropriate roles.
 
-### Directories
-- **Application directory:**  
-- **Log directory:**  
-- **Training directory:**  
-
-### Tasks Performed
-- Created three directories using mkdir dir1 dir2 dir3 command. This saves time and effort as 3 folders were created instead of manually doing it each time. For demo, I added two more directories by typing each on the CLI.
-
-![Make directories](./screenshots/11-make-directories.png)
-
-- 
 
 ### Acceptance Criteria
 - [ ] Dev users can write to the application directory
@@ -164,11 +160,49 @@ As a team, we need shared directories where access is granted only to the approp
 - [ ] Interns can only access the training directory
 - [ ] Unauthorized access attempts fail
 
-### Evidence
-- Screenshot(s):
-- Command output(s):
+
+### Directories
+- **Application directory:**  
+- **Log directory:**  
+- **Training directory:** 
+
+
+### Tasks Performed
+Three directories were created using a single `mkdir` command (`mkdir dir1 dir2 dir3`). This approach is more efficient than creating each directory individually and helps reduce repetitive steps. For demonstration purposes, additional directories were also created manually via bash.
+
+![Make directories](./screenshots/12-make-directories.png)
+
+Users had previously been created with their own home directories. In this task, users were added to their respective shared groups to enable group-based access. For example, `alex-dev` was added to the `devs` group, and group membership was verified to confirm the update.
+
+![Assign user to Group](./screenshots/11-assign-user-to-group.png)
+
+Directory ownership and permissions were then updated to allow the appropriate group write access. The application directory was assigned to the `devs` group, with permissions configured to allow group collaboration while restricting access for non-members.
+
+![Directory ownership and permission](./screenshots/13-group-ownership-and-permission.png)
+
+The same process was repeated for the remaining directories to ensure all acceptance criteria were met.
+
+
+### Commands Used
+```bash
+mkdir <directoryname>
+mkdir <dir1> <dir2> <dir3>
+usermod -aG <groupname> <username>
+id <username>
+ls -l
+chown :<groupname> <directoryname>
+chmod 2775 <directoryname>
+ls -l <directoryname>
+``` 
+
+
+### Reflection
+This task reinforced how group-based permissions simplify access management across shared directories. Using group ownership and setgid reduced the need for individual user permissions and made the setup easier to maintain. I’m getting more comfortable with the workflow, but I still get mixed up with the numeric values for setgid and permissions, so I’ll need more hands-on practice.
+
+![Read-only Access](./screenshots/14-read-only-access-qas.png)
 
 ---
+
 
 ## Task 4 — Implement Least-Privilege Sudo Access (pending)
 
