@@ -152,8 +152,10 @@ As a team, we need shared directories where access is granted only to the approp
 - **Training directory:**  
 
 ### Tasks Performed
-- 
-- 
+- Created three directories using mkdir dir1 dir2 dir3 command. This saves time and effort as 3 folders were created instead of manually doing it each time. For demo, I added two more directories by typing each on the CLI.
+
+![Make directories](./screenshots/11-make-directories.png)
+
 - 
 
 ### Acceptance Criteria
