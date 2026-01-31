@@ -57,3 +57,4 @@ This glossary defines common words and ideas used across my labs.
 - **visudo -c:** A command that validates sudo configuration files for errors.
 
 
+

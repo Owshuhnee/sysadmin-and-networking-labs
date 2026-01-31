@@ -188,7 +188,58 @@ I tried again using the correct location but I got **“Permission denied”**. 
 
 ![Permission denied](./screenshots/17-permission-denied.png)
 
-To address the permission problem, 
+To address the permission issue, I reviewed the permissions on both the application directory and its parent directory. It took some time to fully understand the permission string format, but this exercise helped clarify how Linux evaluates access step by step.
+
+![Checking permissions](./screenshots/18-checking-permissions.png)
+
+I learned that Linux checks permissions on **every directory in the path**, starting from the root and moving down to the target directory. If access is denied at any level, the check stops immediately.
+
+---
+
+### `drwxr-x---` Parent Directory (`/home/jove`)
+
+- **d** → directory
+
+**Owner permissions**
+- `r` → can list contents  
+- `w` → can create, delete, or rename files  
+- `x` → can enter the directory  
+
+**Group permissions**
+- `r` → group can list contents  
+- `x` → group can enter the directory  
+- `-` → no write access  
+
+**Other permissions**
+- `-` → no read  
+- `-` → no write  
+- `-` → no execute (cannot enter directory) !!!
+
+Because `alex-dev` is neither the owner (`jove`) nor a member of the `jove` group, Linux evaluated the **others** permissions and denied access at this level.
+
+---
+
+### `drwxrwsr-x` Application Directory
+
+- **d** → directory
+
+**Owner permissions**
+- `r` → can list contents  
+- `w` → can create, delete, or rename files  
+- `x` → can enter the directory  
+
+**Group permissions**
+- `r` → group can list contents  
+- `w` → group can create and delete files  
+- `s` → setgid (new files inherit the directory’s group)
+
+**Other permissions**
+- `r` → can list contents  
+- `x` → can enter the directory  
+- `-` → no write access  
+
+Even though the application directory was correctly configured for the `devs` group, access was blocked earlier due to the restrictive permissions on the parent directory. This issue proves that Linux enforces permissions on every directory in the path, not just the target directory. To fix this issue, 
+
 
 
 ### Commands Used
