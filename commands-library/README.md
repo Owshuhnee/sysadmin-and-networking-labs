@@ -56,6 +56,9 @@ They act as a personal reference and will be updated as I learn and use more com
 | `ls -l` | “Show me who can do what with these files.” |
 | `ls -d */` | “Show me just the folders.” |
 | `ls -ld */` | “Show me who owns each folder and who can use it.” |
+| r = 4 = read |
+| w = 2 = write |
+| x = 1 = execute |
 
 ---
 
@@ -78,3 +81,4 @@ They act as a personal reference and will be updated as I learn and use more com
 | `clear` / `Ctrl + L` | “Clean the screen so it’s easier to see.” |
 
 ---
+

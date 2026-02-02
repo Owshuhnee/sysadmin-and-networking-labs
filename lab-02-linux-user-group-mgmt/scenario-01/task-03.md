@@ -7,7 +7,7 @@ As a team, we need shared directories where access is granted only to the approp
 
 ### Acceptance Criteria
 - [x] Dev users can write to the application directory
-- [ ] QA users can read logs but cannot modify them
+- [ ] QA users can read logs but cannot modify themgit
 - [ ] Interns can only access the training directory
 - [x] Unauthorized access attempts fail
 
@@ -128,3 +128,7 @@ This task reinforced how group-based permissions simplify access management acro
 
 ![Read-only Access](./screenshots/14-read-only-access-qas.png)
 ![Access only](./screenshots/15-access-only-interns.png)
+
+
+
+https://www.youtube.com/watch?v=4e669hSjaX8&list=PLT98CRl2KxKHKd_tH3ssq0HPrThx2hESW&index=77

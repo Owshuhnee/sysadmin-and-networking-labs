@@ -44,107 +44,10 @@ All access must be controlled through **groups and permissions**, not per-user e
 
 ---
 
-## Task 1 — Group / Role Management
-
-### User Story
-As an administrator, I want role-based groups so permissions can be managed consistently and securely.
 
 
-### Acceptance Criteria
-- [x] Groups exist and are visible in the system  
-- [x] Group IDs and memberships can be verified  
-- [x] No users have unnecessary privileges  
 
 
-### Tasks Performed
-Existing role-based groups (`admins` and `developers`) were already present from the initial Lab 2 setup, so these were reused and refined rather than recreated.
-
-I used `getent group` to review all groups present on the system. This returned a large list, which initially caused some confusion. This behaviour is expected, as Linux includes many pre-existing system groups in addition to administrator-defined groups.
-
-During this review, I observed that custom user and role-based groups typically start at GID 1000 and above, while system groups generally use lower GID values. While I have not yet explored the full reasoning behind this design choice, it has been noted for further research.
-
-To align with clearer role naming and least-privilege principles, the following changes were made:
-- Renamed `admins` to `sysadmins`
-- Renamed `developers` to `devs`
-- Created new role-based groups: `qas` and `interns`
-
-New groups were created using the `groupadd` command, and existing groups were renamed using the `groupmod` command.
-
-
-### Commands Used
-```bash
-getent group
-groupadd <groupname>
-groupmod -n <new-group-name> <old-group-name>
-```
-
-### Evidence
-- [Check existing group](./screenshots/01-getent-group.png)
-- [Add a group](./screenshots/02-group-add.png)
-- [Modify Group](./screenshots/03-group-mod.png)
-- [Verify updates](./screenshots/05-verify-group-update.png)
-
-![Add a group](./screenshots/02-group-add.png)
-![Modify Group](./screenshots/03-group-mod.png)
-![Verify updates](./screenshots/05-verify-group-update.png)
-
-
-### Reflection
-In this task I learned how effective group naming and structure support role-based access control (RBAC). Renaming and reusing groups mirrored real-world administration, where changes are often made on existing systems rather than starting from scratch. Task 1 was straightforward and commands were easy to follow.
-
----
-
-
-## Task 2 — User Management
-
-
-### User Story
-As an administrator, I want new staff accounts created with correct group membership and secure defaults.
-
-
-### Acceptance Criteria
-- [x] Users exist and can log in
-- [x] Correct primary and secondary groups assigned
-- [x] Home directories exist with correct ownership
-- [x] No administrative access granted unintentionally
-
-
-### Tasks Performed
-To reduce naming confusion and better reflect role intent, I first renamed the existing administrative user `jove-admin` to `mark-admin`. During this process, I learned that Linux does **not** automatically update a user’s primary group name or home directory when a username is modified. These components must be handled separately to maintain consistency. In the screenshot I did 3-steps to complete the setup. 
-
-![Modify Admin User](./screenshots/06-modify-admin-user.png)
-
-After confirming the administrative account was correctly updated, I created additional role-based users for the environment. Each user was created with a home directory and default shell, then verified to ensure correct UID, GID, group membership, and home directory ownership.
-
-- **Developers** alex-dev
-- **QA** mika-qa
-- **Interns** sam-intern
-
-![Add Users](./screenshots/07-create-users-success.png)  
-![Verify Users-Groups](./screenshots/08-verify-uid-gid.png)  
-![User login sucess](./screenshots/10-user-login-sucess.png) 
-![Verify Home Directory](./screenshots/09-verify-user-home-dir.png)
-
-Note: Attempts to elevate privileges using `sudo` and switch users using `su` were intentionally denied. This confirms that only explicitly authorised accounts can perform administrative actions, enforcing least-privilege access.
-
-![Sudo access](./screenshots/10-verify-sudo-access.png)
-
-
-### Commands Used
-```bash
-usermod -l <new-username> <old-username>
-groupmod -n <new-groupname> <old-groupname>
-ls -ld /home/<username>
-useradd -m -s /bin/bash <username>
-getent passwd <username>
-id <username>
-sudo -l -U <username>
-```
-
-### Reflection
-This task showed that updating user accounts in Linux often involves multiple steps to keep usernames, groups, and home directories consistent. Creating and validating role-based users reinforced the importance of checking permissions instead of relying on defaults. I’ll need more practice with Task 2 to fully lock in the workflow.
-
----
 
 
 ## Task 3 — Configure Shared Directories & Permissions (pending)
@@ -355,3 +258,11 @@ This lab was completed **without AI assistance**, using:
 - System documentation (`man`)
 - Trial-and-error testing
 - Research and Video tutorials
+
+
+## Tasks
+- [Task 1 — Group / Role Management](./task-01.md)
+- [Task 2 — User Management](./task-02.md)
+- [Task 3 — Shared Directories & Permissions](./task-03.md)
+- [Task 4 — Least-Privilege Sudo Access](./task-04.md)
+- [Task 5 — Incident Response: Permission Denied](./task-05.md)

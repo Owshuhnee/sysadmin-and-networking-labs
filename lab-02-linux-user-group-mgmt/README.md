@@ -37,7 +37,6 @@ getent group developers
 ```
 **Evidence:**
 - [01-create-verify-groups](./screenshots/01-create-verify-groups.png)
-![Create and verify groups](./screenshots/01-create-verify-groups.png)
 
 
 ### Task 2 — Create Users
@@ -50,10 +49,10 @@ sudo useradd -m -s /bin/bash jove-admin
 sudo useradd -m -s /bin/bash jove-dev
 sudo passwd jove-admin
 sudo passwd jove-dev
+
 ```
 **Evidence:**
 - [02-create-users](./screenshots/02-create-users.png)
-![Create users](./screenshots/02-create-users.png)
 
 
 ### Task 3 — Assign Users to Groups
@@ -65,9 +64,9 @@ sudo usermod -aG developers jove-dev
 id jove-admin
 id jove-dev
 ```
+
 **Evidence:**
 - [03-assign-users-to-groups](./screenshots/03-assign-users-to-groups.png)
-![Assign users to groups](./screenshots/03-assign-users-to-groups.png)
 
 
 ### Task 4 — Configure & Validate Sudo Access
@@ -78,23 +77,20 @@ sudo visudo -f /etc/sudoers.d/admins
 sudo chmod 440 /etc/sudoers.d/admins
 sudo visudo -c
 ```
+
 **Evidence:**
 - [04-sudoers-admins-config](./screenshots/04-sudoers-admins-config.png)
 - [05-sudoers-validate-visudo](./screenshots/05-sudoers-validate-visudo.png)
 - [06-remove-admin-access](./screenshots/06-remove-admin-access.png)
-![Admins sudoers configuration](./screenshots/04-sudoers-admins-config.png)
-![Sudoers validation](./screenshots/05-sudoers-validate-visudo.png)
-![Remove unintended admin access](./screenshots/06-remove-admin-access.png)
 
 During validation, a misconfiguration was identified where the jove-dev user had unintentionally inherited administrative privileges through group membership.
-
 The issue was corrected by removing the user from the privileged group:
 
 ```bash
 sudo gpasswd -d jove-dev admins
 ```
 
-- jove-admin has full sudo access
+- jove-admin has sudo access
 - jove-dev has no sudo privileges
 
 
@@ -116,11 +112,6 @@ Access was validated by testing write permissions as a group member and as a non
 - [10-dev-write-success](./screenshots/10-dev-write-sucess.png)
 - [11-non-member-denied](./screenshots/11-non-member-denied.png)
 
-![07-sudo-access-jove-admin](./screenshots/07-sudo-access-jove-admin.png)
-![08-sudo-access-jove-dev-denied](./screenshots/08-sudo-access-jove-dev-denied.png)
-![09-devshare-permissions](./screenshots/09-devshare-permissions.png)
-![10-dev-write-success](./screenshots/10-dev-write-sucess.png)
-![11-non-member-denied](./screenshots/11-non-member-denied.png)
 
 ---
 
@@ -133,14 +124,20 @@ Access was validated by testing write permissions as a group member and as a non
 ---
 
 ## Reflection
-This lab helped me better understand how Linux access control works through groups and permissions rather than individual users. Working through permission issues showed me how easy it is to misconfigure access and how to verify and fix problems using commands like id, sudo -l, and ls -ld.
+This lab reinforced how Linux access control is primarily driven by group membership and permissions rather than individual users. Working through permission issues highlighted how easily misconfigurations can occur and the importance of validating access using tools such as `id`, `sudo -l`, and `ls -ld`.
 
-There are still plenty of Linux commands I’m getting familiar with, but running the lab locally in VirtualBox made it much easier to experiment and learn. I plan to redo this lab with minimal guidance to build more confidence.
+Running the lab locally in VirtualBox made it easier to experiment and troubleshoot. I plan to revisit this lab with minimal guidance to further strengthen my understanding.
 
 ---
-
 
 ## Next Steps
 - Practice file ownership and permission management in more depth before proceeding to Lab 3
 - Continue building Linux administration labs to strengthen troubleshooting skills
+
+---
+
+## Scenario-Based Practice
+To apply these concepts in a realistic environment involving role changes, permission issues, and least-privilege enforcement, see:
+
+- [Scenario 1 — Role & Permission Incident Response](./scenario-01/README.md)
 
