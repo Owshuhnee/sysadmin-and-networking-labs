@@ -112,7 +112,6 @@ Access was validated by testing write permissions as a group member and as a non
 - [10-dev-write-success](./screenshots/10-dev-write-sucess.png)
 - [11-non-member-denied](./screenshots/11-non-member-denied.png)
 
-
 ---
 
 ## Security Considerations
@@ -124,7 +123,7 @@ Access was validated by testing write permissions as a group member and as a non
 ---
 
 ## Reflection
-This lab reinforced how Linux access control is primarily driven by group membership and permissions rather than individual users. Working through permission issues highlighted how easily misconfigurations can occur and the importance of validating access using tools such as `id`, `sudo -l`, and `ls -ld`.
+This lab showed me how Linux access control is primarily driven by group membership and permissions rather than individual users. Working through permission issues highlighted how easily misconfigurations can occur and the importance of validating access using tools such as `id`, `sudo -l`, and `ls -ld`.
 
 Running the lab locally in VirtualBox made it easier to experiment and troubleshoot. I plan to revisit this lab with minimal guidance to further strengthen my understanding.
 

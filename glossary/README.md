@@ -56,5 +56,5 @@ This glossary defines common words and ideas used across my labs.
 - **Validation:** Checking that a configuration is correct before using it.
 - **visudo -c:** A command that validates sudo configuration files for errors.
 
-
+**Traverse**
 

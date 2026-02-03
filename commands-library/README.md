@@ -18,6 +18,7 @@ They act as a personal reference and will be updated as I learn and use more com
 | `groupmod -n <new> <old>` | “Change the team’s name without deleting it.” |
 | `gpasswd -d <user> <group>` | “Take this person out of the team.” |
 | `getent group <group>` | “Show me this team and who’s in it.” |
+| `getent passwd` | “” |
 | `getent passwd <user>` | “Show me this person’s account details.” |
 
 ---
@@ -27,6 +28,7 @@ They act as a personal reference and will be updated as I learn and use more com
 | Command | Explain like I'm 5 |
 |-------|--------------------|
 | `su - <username>` | “Pretend you logged in as this person properly, with their settings.” |
+| `ls -ld` | “Who owns this room, and who is allowed inside?” |
 | `ls -ld /home/<username>` | “Who owns this room, and who is allowed inside?” |
 
 ---

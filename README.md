@@ -16,8 +16,22 @@ Each lab includes:
 - Security considerations and reflections
 
 ## Labs
-- Lab 1: Virtualisation Fundamentals
-- Lab 2: Linux User & Group Management
+
+### Lab 1: Virtualisation Fundamentals
+- Task 1 — Create a server VM
+
+### Lab 2: Linux User & Group Management
+- Core Tasks
+  - Task 1 — Create Groups
+  - Task 2 — Create Users
+  - Task 3 — Assign Users to Groups
+  - Task 4 — Configure & Validate Sudo Access
+  - Task 5 — Shared Directory with Group-Based Access (setgid)
+
+- Scenario-Based Practice
+  - [Scenario 1 - Role & Permission Incident Response](./scenario-01/README.md)
+
+
 - Lab 3: Networking Basics
 - Lab 4: Services & Process Management
 - Lab 5: Security Hardening
