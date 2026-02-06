@@ -1,86 +1,99 @@
-# Command Notes (My Toddler Notes)
+# 🧸 Command Notes (My Toddler Notes)
 
-These notes explain the commands I use across labs in very simple terms.
-They act as a personal reference and will be updated as I learn and use more commands.
+Simple explanations for Linux commands I’ve used across my SysAdmin labs.  
+Written so Future-Me can understand them quickly.
+
+These notes grow as I learn.
 
 ---
 
 ## Users & Groups
 
-| Command | Explain like I'm 5 |
+| Command | Explain like I’m 5 |
 |-------|--------------------|
-| `whoami` | “Who am I right now?” |
-| `useradd -m -s /bin/bash <username>` | “Make a new person and give them their own room.” |
-| `usermod -l <new> <old>` | “Change the person’s name, but keep everything else the same.” |
-| `usermod -aG <group> <user>` | “Put this person into a team without removing them from other teams.” |
-| `id <username>` | “Show me this person’s ID card and what teams they belong to.” |
-| `groupadd <group>` | “Make a new team.” |
-| `groupmod -n <new> <old>` | “Change the team’s name without deleting it.” |
-| `gpasswd -d <user> <group>` | “Take this person out of the team.” |
-| `getent group <group>` | “Show me this team and who’s in it.” |
-| `getent passwd` | “” |
-| `getent passwd <user>` | “Show me this person’s account details.” |
+| `useradd -m -s /bin/bash <username>` | Make a new person and give them their own room and a proper shell. |
+| `usermod -l <new> <old>` | Change this person’s name but keep their stuff. |
+| `usermod -aG <group> <user>` | Add this person to a team without removing them from other teams. |
+| `id <user>` | Show this person’s ID card and all their teams. |
+| `groupadd <group>` | Make a new team. |
+| `groupmod -n <new> <old>` | Rename the team without deleting it. |
+| `gpasswd -d <user> <group>` | Remove this person from the team. |
+| `getent group <group>` | Show this team and who’s in it. |
+| `getent passwd` | Show all user accounts on the system. |
+| `getent passwd <user>` | Show this person’s account details. |
+| `passwd <user>` | Set or change this person’s password. |
+| `passwd -l <user>` | Lock this account so they can’t log in. |
+| `passwd -u <user>` | Unlock this account so they can log in again. |
+| `passwd -S <user>` | Check whether this account is locked or active. |
 
 ---
 
 ## Navigation & Identity
 
-| Command | Explain like I'm 5 |
+| Command | Explain like I’m 5 |
 |-------|--------------------|
-| `su - <username>` | “Pretend you logged in as this person properly, with their settings.” |
-| `ls -ld` | “Who owns this room, and who is allowed inside?” |
-| `ls -ld /home/<username>` | “Who owns this room, and who is allowed inside?” |
+| `whoami` | Who am I right now? |
+| `su - <user>` | Log in as this person properly with their settings. |
+| `ls -ld` | Who owns this folder and who is allowed inside? |
+| `ls -ld /home/<user>` | Who owns this person’s home folder and who can use it? |
 
 ---
 
-## Sudo & Permissions
+## Sudo & Admin Powers
 
-| Command | Explain like I'm 5 |
+| Command | Explain like I’m 5 |
 |-------|--------------------|
-| `visudo -f /etc/sudoers.d/admins` | “Carefully write the rules for who is allowed to be the boss.” |
-| `chmod 440 /etc/sudoers.d/admins` | “Only the system can read these rules, nobody can mess with them.” |
-| `visudo -c` | “Double-check the rules before using them.” |
-| `sudo -l` | “What boss-level commands am I allowed to run?” |
+| `visudo -f /etc/sudoers.d/admins` | Carefully write rules about who is allowed to be the boss. |
+| `chmod 440 /etc/sudoers.d/admins` | Only root can read the rules and nobody can change them. |
+| `visudo -c` | Check the rules so I don’t break sudo. |
+| `sudo -l` | What boss-level commands am I allowed to run? |
+| `sudo passwd <user>` | Force-set or change this person’s password. |
 
 ---
 
 ## Files & Directories
 
-| Command | Explain like I'm 5 |
+| Command | Explain like I’m 5 |
 |-------|--------------------|
-| `mkdir <directory>` | “Make a new folder.” |
-| `mkdir <dir1> <dir2> <dir3>` | “Make lots of folders in one go.” |
-| `mkdir -p <path>` | “Make the folder and any folders above it if they don’t exist.” |
-| `chown <owner>:<group> <dir>` | “Decide who owns it and which team it belongs to.” |
-| `chmod 2770 <dir>` | “Only the team can use this folder, and everything inside stays part of the team.” |
-| `chmod 2775 <dir>` | “The team can fully use it, others can look but not change anything.” |
-| `ls` | “What’s here?” |
-| `ls -l` | “Show me who can do what with these files.” |
-| `ls -d */` | “Show me just the folders.” |
-| `ls -ld */` | “Show me who owns each folder and who can use it.” |
-| r = 4 = read |
-| w = 2 = write |
-| x = 1 = execute |
+| `mkdir <dir>` | Make a new folder. |
+| `mkdir <dir1> <dir2> <dir3>` | Make lots of folders at once. |
+| `mkdir -p <path>` | Make the folder and any missing parent folders. |
+| `chown <owner>:<group> <dir>` | Decide who owns it and which team it belongs to. |
+| `chmod 2770 <dir>` | Only owner and team can use it. New files stay with the team. |
+| `chmod 2775 <dir>` | Team can fully use it. Others can look but not change. |
+| `ls` | What’s here? |
+| `ls -l` | Show who can read, write, or run each file. |
+| `ls -d */` | Show only folders. |
+| `ls -ld */` | Show folder ownership and permissions. |
+
+---
+
+## Permission Bits
+
+| Value | Meaning |
+|------|--------|
+| `r = 4` | Read (look inside) |
+| `w = 2` | Write (change things) |
+| `x = 1` | Execute / enter |
 
 ---
 
 ## Permissions Library (Quick Reference)
 
-| Mode | Explain like I'm 5 |
+| Mode | Explain like I’m 5 |
 |-----|--------------------|
-| `2770` | “Owner and team can read, write, and enter. Others are blocked. New files stay with the team.” |
-| `2775` | “Owner and team can fully use it. Others can look and enter, but not change anything.” |
-| `111` | “You can enter or run it, but you can’t see or change anything inside.” |
-| `555` | “Everyone can look and enter, but nobody can change anything.” |
+| `2770` | Owner and team can read, write, and enter. Others are blocked. New files stay with the team. |
+| `2775` | Owner and team can fully use it. Others can look and enter only. |
+| `111` | You can enter or run it, but can’t see or change anything. |
+| `555` | Everyone can look and enter, but nobody can change anything. |
 
 ---
 
 ## Misc Commands
 
-| Command | Explain like I'm 5 |
+| Command | Explain like I’m 5 |
 |-------|--------------------|
-| `sudo shutdown now` | “Turn the computer off right now.” |
-| `clear` / `Ctrl + L` | “Clean the screen so it’s easier to see.” |
+| `sudo shutdown now` | Turn the computer off right now. |
+| `clear` / `Ctrl + L` | Clean the screen so it’s easier to read. |
 
 ---
-
