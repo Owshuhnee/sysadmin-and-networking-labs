@@ -58,13 +58,28 @@ Full sudo access was verified successfully.
 ---
 
 **alex-dev (Developer)**  
-When initially testing sudo access as `alex-dev`, I was prompted for a password. I first attempted to use the primary admin (`jove`) password, which failed. I thought that its the password for every user as jove was the main admin. I learned that sudo authentication requires the **target user’s own password** and not another user’s credentials.
+When initially testing sudo access as `alex-dev`, I was prompted for a password. I first attempted to use the primary admin (`jove`) password, assuming it applied to all users. This failed, which helped clarify that sudo authentication requires the **current user’s own password**, not another user’s credentials.
 
-After setting a password for `alex-dev`, sudo access was tested again.
+After setting a password for `alex-dev`, sudo access was tested again and behaved as expected.
 
 ![Verify sudo access — alex-dev](./screenshots/24-verify-sudo-alex-dev.png)
 
 ---
+
+**mika-qa (QA)**  
+Based on the behaviour observed with `alex-dev`, a password was set for `mika-qa` before verifying sudo access. The account was correctly denied any sudo privileges.
+
+![Verify sudo access — mika-qa](./screenshots/25-verify-sudo-mika-qa.png)
+
+---
+
+**sam-intern (Intern)**  
+A password was set for `sam-intern` prior to verification. As expected, the account was unable to execute any sudo commands, confirming least-privilege enforcement.
+
+![Verify sudo access — sam-intern](./screenshots/26-verify-sudo-sam-intern.png)
+
+---
+
 
 ### Commands Used
 ```bash
