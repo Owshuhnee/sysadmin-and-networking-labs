@@ -17,7 +17,7 @@ Each lab includes:
 
 ## Labs
 
-### Lab 1: Virtualisation Fundamentals
+### Lab 1: Virtualization Fundamentals
 - Task 1 — Create a server VM
 
 ### Lab 2: Linux User & Group Management
@@ -38,7 +38,7 @@ Each lab includes:
 
 ## Reference
 - [Glossary](./glossary/README.md)
-- [Command Notes](./commands-library/README.md)
+- [Linux Command Notes](./commands-library/README.md)
 
 ---
 

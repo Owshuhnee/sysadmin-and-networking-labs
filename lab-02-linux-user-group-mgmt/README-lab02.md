@@ -138,5 +138,5 @@ Running the lab locally in VirtualBox made it easier to experiment and troublesh
 ## Scenario-Based Practice
 To apply these concepts in a realistic environment involving role changes, permission issues, and least-privilege enforcement, see:
 
-- [Scenario 1 — Role & Permission Incident Response](./scenario-01/README.md)
+- [Scenario 1 — Role & Permission Incident Response](./scenario-01/README-scenario01.md)
 
