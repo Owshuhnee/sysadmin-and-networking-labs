@@ -96,3 +96,22 @@ No incorrect answers recorded.
 ![Checkpoint Exam — Question 5](./screenshots/CP2Q5.png)
 ![Checkpoint Exam — Question 6](./screenshots/CP2Q6.png)
 ![Checkpoint Exam — Question 19](./screenshots/CP2Q19.png)
+
+---
+
+## Module 8 - 73%
+![Module 8 — Question 5](./screenshots/M8Q5.png)
+![Module 8 — Question 8](./screenshots/M8Q8.png)
+![Module 8 — Question 9](./screenshots/M8Q9.png)
+
+---
+
+## Module 9 -
+## Module 10 -
+## Module 11 -
+## Module 12 -
+## Module 13 -
+## Module 14 -
+## Module 15 -
+## Module 16 -
+## Module 17 -
