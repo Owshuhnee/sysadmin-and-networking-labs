@@ -1,4 +1,4 @@
-# NetAcad Networking Basics — Terms by Module
+# NetAcad Networking Basics - Terms by Module
 
 This document contains brief definitions of key terms from the
 **Cisco Networking Academy – Networking Basics** course.
@@ -82,9 +82,22 @@ This document contains brief definitions of key terms from the
 
 ## Module 8 — The Internet Protocol
 - **IPv4** – Logical network address that identifies a host; 32-bit (4 octets)  
-- **Subnet Mask** – Determines which part of an IP address is network vs host  
+- **Subnet Mask** – Determines which part of an IP address is network vs host 
+
 
 ---
+## Module 9 - IPV4 and Network Segmentation
+- **Unicast Transmission** -  Refers to one device sending a message to one other device in one-to-one communications.
+
+- **Broadcast Transmission** - Refers to a device sending a message to all the devices on a network in one-to-all communications.
+
+- **Multicast Transmission** - 
+- **Private IPv4 addresses** - 
+- **Loopback addresses** -
+- **Link-Local addresses** -
+- **Automatic Private IP Addressing (APIPA)** -
+- **Regional Internet Registries** -
+
 
 ## Miscellaneous
 ### OSI Model (7 Layers)
@@ -113,6 +126,8 @@ This document contains brief definitions of key terms from the
 - **OSI Layers 2–1** → TCP/IP **Network Access**
 
 ---
+
+![RFC 1918](./screenshots/RFC%201918%20Private%20address%20Range.png)
 
 ## Resources
 - [Network Access Layer: Introduction — Rick Graziani](https://www.youtube.com/watch?v=k1AC96Ppuzc&list=PLMLm7-g0V0ke_dSguEQfz-ZSHrSUikTJ7)
