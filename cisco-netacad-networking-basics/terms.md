@@ -81,23 +81,54 @@ This document contains brief definitions of key terms from the
 ---
 
 ## Module 8 — The Internet Protocol
-- **IPv4** – Logical network address that identifies a host; 32-bit (4 octets)  
-- **Subnet Mask** – Determines which part of an IP address is network vs host 
 
+- **IPv4** – Logical network address that identifies a host; 32-bit (4 octets).
+
+- **Subnet Mask** – Determines which portion of an IP address identifies the network and which identifies the host.
+
+- **Network Address** – The first address in a subnet; identifies the network itself and cannot be assigned to a device.
+
+- **Broadcast Address** – The last address in a subnet; used to send data to all devices in that subnet.
+
+- **Host Address** – Any usable IP address assigned to a device within a subnet.
+
+- **Default Gateway** – The router address that allows devices to communicate outside their local network.
+
+- **Public IPv4 Address** – Globally routable IP address assigned by an ISP.
+
+- **Private IPv4 Address** – IP address reserved for internal networks; not routable on the internet.
+
+- **Binary** – Base-2 numbering system (0s and 1s) used to represent IP addresses at the lowest level.
+
+- **Octet** – One 8-bit section of an IPv4 address (0–255).
 
 ---
-## Module 9 - IPV4 and Network Segmentation
-- **Unicast Transmission** -  Refers to one device sending a message to one other device in one-to-one communications.
 
-- **Broadcast Transmission** - Refers to a device sending a message to all the devices on a network in one-to-all communications.
+## Module 9 — IPv4 and Network Segmentation
 
-- **Multicast Transmission** - 
-- **Private IPv4 addresses** - 
-- **Loopback addresses** -
-- **Link-Local addresses** -
-- **Automatic Private IP Addressing (APIPA)** -
-- **Regional Internet Registries** -
+- **Unicast Transmission** – Refers to one device sending a message to one other device (one-to-one communication).
 
+- **Broadcast Transmission** – Refers to one device sending a message to all devices on a network (one-to-all communication).
+
+- **Multicast Transmission** – Refers to one device sending a message to a specific group of devices (one-to-many communication).
+
+- **Private IPv4 Addresses** – IP addresses reserved for internal networks that are not routable on the public internet.  
+  - 10.0.0.0 – 10.255.255.255  
+  - 172.16.0.0 – 172.31.255.255  
+  - 192.168.0.0 – 192.168.255.255  
+
+- **Loopback Address** – A special IP address used by a device to refer to itself.  
+  - IPv4: 127.0.0.1  
+  Used for testing and troubleshooting.
+
+- **Link-Local Address** – An IP address automatically assigned when a device cannot obtain an IP from DHCP.  
+  - Range: 169.254.0.0 – 169.254.255.255  
+
+- **Automatic Private IP Addressing (APIPA)** – A feature in Windows that assigns a link-local address (169.254.x.x) when DHCP fails.
+
+- **Regional Internet Registries (RIRs)** – Organizations responsible for allocating IP addresses in specific geographic regions (e.g., ARIN, APNIC, RIPE NCC).
+
+---
 
 ## Miscellaneous
 ### OSI Model (7 Layers)
