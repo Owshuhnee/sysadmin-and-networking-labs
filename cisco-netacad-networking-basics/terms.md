@@ -128,7 +128,22 @@ This document contains brief definitions of key terms from the
 
 - **Regional Internet Registries (RIRs)** – Organizations responsible for allocating IP addresses in specific geographic regions (e.g., ARIN, APNIC, RIPE NCC).
 
+- **RIR** -
+
+- **Address Resolution Protocol (ARP)** -
+
+- **Dynamic Host Configuration Protocol (DHCP)** -
+
+- **Subnetting** -
+
 ---
+
+## Module 10 - IPv6 Addressing Formats and Rules
+- **Dual Stack** -
+- **Tunneling** -
+- **Translation** -
+- **Hexadecimal Number System** - 
+- **IPv6 Addressing Format** - 
 
 ## Miscellaneous
 ### OSI Model (7 Layers)

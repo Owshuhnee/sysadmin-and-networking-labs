@@ -106,8 +106,19 @@ No incorrect answers recorded.
 
 ---
 
-## Module 9 -
-## Module 10 -
+## Module 9 - 73%
+![Module 9 — Question 1](./screenshots/M9Q1.png)
+![Module 9 — Question 3](./screenshots/M9Q3.png)
+![Module 9 — Question 9](./screenshots/M9Q6.png)
+
+---
+
+## Module 10 - 91%
+
+![Module 9 — Question 11](./screenshots/M7Q11.png)
+
+---
+
 ## Module 11 -
 ## Module 12 -
 ## Module 13 -
