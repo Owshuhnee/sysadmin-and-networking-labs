@@ -58,9 +58,7 @@ Each screenshot includes:
 
 ## Checkpoint Exam: Build a small network — 85%
 
-![Checkpoint Exam — Question 9](./screenshots/CP1Q9.png)  
-![Checkpoint Exam — Question 10](./screenshots/CP1Q10.png)  
-![Checkpoint Exam — Question 15](./screenshots/CP1Q15.png)
+![Checkpoint Result](./screenshots/CP1Result.png)
 
 ---
 
@@ -90,12 +88,7 @@ No incorrect answers recorded.
 
 ## Checkpoint Exam: Network Access - 71%
 
-![Checkpoint Exam — Question 2](./screenshots/CP2Q2.png) 
-![Checkpoint Exam — Question 3](./screenshots/CP2Q3.png) 
-![Checkpoint Exam — Question 4](./screenshots/CP2Q4.png)
-![Checkpoint Exam — Question 5](./screenshots/CP2Q5.png)
-![Checkpoint Exam — Question 6](./screenshots/CP2Q6.png)
-![Checkpoint Exam — Question 19](./screenshots/CP2Q19.png)
+![Checkpoint Result](./screenshots/CP2Result.png) 
 
 ---
 
@@ -115,11 +108,22 @@ No incorrect answers recorded.
 
 ## Module 10 - 91%
 
-![Module 9 — Question 11](./screenshots/M7Q11.png)
+![Module 10 — Question 11](./screenshots/M7Q11.png)
 
 ---
 
-## Module 11 -
+## Module 11 - 82%
+
+![Module 11 — Question 3](./screenshots/M11Q3.png)
+![Module 11 — Question 10](./screenshots/M11Q10.png)
+
+---
+
+## Checkpoint Exam: The Internet Protocol  - 90%
+![Checkpoint Result](./screenshots/CP3Result.png)
+
+---
+
 ## Module 12 -
 ## Module 13 -
 ## Module 14 -

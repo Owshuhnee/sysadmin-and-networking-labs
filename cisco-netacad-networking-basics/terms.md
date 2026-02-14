@@ -83,23 +83,14 @@ This document contains brief definitions of key terms from the
 ## Module 8 — The Internet Protocol
 
 - **IPv4** – Logical network address that identifies a host; 32-bit (4 octets).
-
 - **Subnet Mask** – Determines which portion of an IP address identifies the network and which identifies the host.
-
 - **Network Address** – The first address in a subnet; identifies the network itself and cannot be assigned to a device.
-
 - **Broadcast Address** – The last address in a subnet; used to send data to all devices in that subnet.
-
 - **Host Address** – Any usable IP address assigned to a device within a subnet.
-
 - **Default Gateway** – The router address that allows devices to communicate outside their local network.
-
 - **Public IPv4 Address** – Globally routable IP address assigned by an ISP.
-
 - **Private IPv4 Address** – IP address reserved for internal networks; not routable on the internet.
-
 - **Binary** – Base-2 numbering system (0s and 1s) used to represent IP addresses at the lowest level.
-
 - **Octet** – One 8-bit section of an IPv4 address (0–255).
 
 ---
@@ -129,12 +120,10 @@ This document contains brief definitions of key terms from the
 - **Regional Internet Registries (RIRs)** – Organizations responsible for allocating IP addresses in specific geographic regions (e.g., ARIN, APNIC, RIPE NCC).
 
 - **RIR** -
-
 - **Address Resolution Protocol (ARP)** -
-
 - **Dynamic Host Configuration Protocol (DHCP)** -
-
 - **Subnetting** -
+- **Experimental Address** -
 
 ---
 
@@ -144,6 +133,25 @@ This document contains brief definitions of key terms from the
 - **Translation** -
 - **Hexadecimal Number System** - 
 - **IPv6 Addressing Format** - 
+
+---
+
+## Module 11 - Dynamic addressing with DHCP
+
+- **Static Address** -
+- **Dynamic Address** -
+- **DHCP** -
+- **DHCP Discover** -
+- **DHCP Offer** -
+- **DHCP Request** -
+- **DHCP Acknowledgement** -
+- **IP address** - This identifies the host on the network.
+- **Subnet Mask** - This is used to identify the network on which the host is connected.
+- **Default Gateway** - This identifies the networking device that the host uses to access the internet or another remote network.
+
+--- 
+
+## Module 12 -
 
 ## Miscellaneous
 ### OSI Model (7 Layers)
