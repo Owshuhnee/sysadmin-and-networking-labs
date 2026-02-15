@@ -1,187 +1,191 @@
-# NetAcad Networking Basics - Terms by Module
+# Terms per Module
 
-This document contains brief definitions of key terms from the
+This document contains brief definitions of key terms from the  
 **Cisco Networking Academy – Networking Basics** course.
 
 ---
 
 ## Module 1 — Communication in a Connected World
-- **Network** – Devices connected to share data  
-- **Protocol** – Rules that define how devices communicate  
-- **Bandwidth** – Maximum data capacity of a network connection  
-- **Latency** – Delay before data begins to transfer  
-- **Throughput** – Actual amount of data successfully transferred  
-- **Packet** – Small unit of data sent across a network  
+- **Network** – Devices connected to share data.
+- **Protocol** – Rules that define how devices communicate.
+- **Bandwidth** – Maximum data capacity of a network connection.
+- **Latency** – Delay before data begins to transfer.
+- **Throughput** – Actual amount of data successfully transferred.
+- **Packet** – Small unit of data sent across a network.
 
 ---
 
 ## Module 2 — Network Components, Types, and Connections
-- **ISP (Internet Service Provider)** – Company that provides internet access  
-- **Client** – Device that requests services or data from another device  
-- **Server** – Device that provides services or data to clients  
-- **P2P (Peer-to-Peer) Network** – Network where devices share resources directly  
-- **Network Infrastructure** – Components that support network communication  
-  - End devices  
-  - Intermediate devices  
-  - Network media  
-- **Cable** – Physical medium used to transmit data  
-- **DSL (Digital Subscriber Line)** – Internet connection using telephone lines  
-- **Satellite Connection** – Internet access delivered via satellite links  
+- **ISP (Internet Service Provider)** – Company that provides internet access.
+- **Client** – Device that requests services or data.
+- **Server** – Device that provides services or data.
+- **P2P (Peer-to-Peer) Network** – Devices share resources directly without a central server.
+- **Network Infrastructure** – Components that support communication (end devices, intermediate devices, media).
+- **DSL (Digital Subscriber Line)** – Internet connection using telephone lines.
+- **Satellite Connection** – Internet delivered via satellite.
 
 ---
 
 ## Module 3 — Wireless and Mobile Networks
-- **Wireless Networks** – Networks that transmit data without cables  
-- **Wi-Fi** – Wireless LAN technology based on IEEE 802.11 standards  
-- **GPS (Global Positioning System)** – Satellite system used for location tracking  
-- **Cellular Data** – Mobile network data provided by cellular carriers  
-- **Bluetooth** – Short-range wireless communication technology  
-- **NFC (Near Field Communication)** – Very short-range wireless communication  
+- **Wireless Network** – Network that transmits data without cables.
+- **Wi-Fi** – Wireless LAN technology based on IEEE 802.11 standards.
+- **GPS (Global Positioning System)** – Satellite-based location system.
+- **Cellular Data** – Mobile network internet service.
+- **Bluetooth** – Short-range wireless communication.
+- **NFC (Near Field Communication)** – Very short-range wireless communication.
 
 ---
 
 ## Module 4 — Build a Home Network
-- **WLAN (Wireless Local Area Network)** – Local network using wireless connections  
-- **Network Router** – Device that forwards data between different networks  
-- **SSID (Service Set Identifier)** – Name of a wireless network  
-- **IEEE** – Organization that defines networking standards  
+- **WLAN (Wireless Local Area Network)** – Local network using wireless connections.
+- **Router** – Device that forwards traffic between networks.
+- **SSID (Service Set Identifier)** – Name of a wireless network.
+- **IEEE** – Organization that defines networking standards.
 
 ---
 
 ## Module 5 — Communication Principles
-- **Protocols** – Defined rules for data format, transmission, and delivery  
-- **Network Standards Organizations** – Groups that create networking standards  
-- **IANA (Internet Assigned Numbers Authority)** – Manages IP addresses and ports  
-- **IETF (Internet Engineering Task Force)** – Develops internet standards  
-- **TCP/IP Model** – Four-layer model used for internet communication  
-- **OSI Model** – Seven-layer model used to understand networking concepts  
+- **IANA (Internet Assigned Numbers Authority)** – Manages global IP address and port allocations.
+- **IETF (Internet Engineering Task Force)** – Develops internet standards.
+- **TCP/IP Model** – Four-layer model used in real-world networking.
+- **OSI Model** – Seven-layer model used to understand networking concepts.
 
 ---
 
 ## Module 6 — Network Media
-- **Data** – Information transmitted across a network  
-- **Twisted-Pair Cable** – Common copper cabling used in Ethernet networks  
-- **Coaxial Cable** – Shielded cable used for broadband and legacy networks  
-- **Fiber-Optic Cable** – Cable that transmits data using light  
-- **Network Media Types** – Physical or wireless methods used to carry data  
+- **Twisted-Pair Cable** – Common copper Ethernet cable.
+- **Coaxial Cable** – Shielded cable used for broadband and legacy systems.
+- **Fiber-Optic Cable** – Cable that transmits data using light.
+- **Network Media** – Physical or wireless methods used to carry data.
 
 ---
 
 ## Module 7 — The Access Layer
-- **NIC (Network Interface Card)** – Hardware that connects a device to a network  
-- **MAC (Media Access Control)** – Physical Layer 2 address used on a local network  
-- **Encapsulation** – Wrapping data with headers as it moves down the network stack  
-- **Internet Protocol (IP)** – Logical Layer 3 address used to route data  
-- **Preamble** – Bits sent before a frame to synchronize sender and receiver  
-- **Start Frame Delimiter (SFD)** – Marks the exact start of an Ethernet frame  
-- **Ethernet Frame** – Layer 2 data unit used to transmit data on a LAN  
-- **Access Layer** – Network layer where end devices connect to switches  
-- **Frame Check Sequence (FCS)** – Error-checking field used to detect corrupted frames  
+- **NIC (Network Interface Card)** – Hardware that connects a device to a network.
+- **MAC Address** – Unique Layer 2 hardware address assigned to a NIC.
+- **Encapsulation** – Wrapping data with headers as it moves through layers.
+- **Ethernet Frame** – Layer 2 data unit used on a LAN.
+- **Preamble** – Bits used to synchronize communication.
+- **Start Frame Delimiter (SFD)** – Marks the beginning of an Ethernet frame.
+- **Frame Check Sequence (FCS)** – Error-detection field in an Ethernet frame.
+- **Access Layer** – Network layer where end devices connect to switches.
 
 ---
 
 ## Module 8 — The Internet Protocol
+- **IPv4** – 32-bit logical address used to identify a host.
+- **Subnet Mask** – Identifies the network and host portions of an IP address.
+- **Network Address** – First address in a subnet; identifies the network.
+- **Broadcast Address** – Last address in a subnet; reaches all devices.
+- **Host Address** – Usable IP address assigned to a device.
+- **Default Gateway** – Router address used to access other networks.
+- **Public IPv4 Address** – Globally routable IP address.
+- **Private IPv4 Address** – Internal IP address not routable on the internet.
+  - **10.0.0.0 – 10.255.255.255** – Common in enterprise networks
+  - **172.16.0.0 – 172.31.255.255** – Often used in business environments
+  - **192.168.0.0 – 192.168.255.255** – Common in home networks
+- **Binary** – Base-2 numbering system (0 and 1).
+- **Octet** – One 8-bit section of an IPv4 address.
 
-- **IPv4** – Logical network address that identifies a host; 32-bit (4 octets).
-- **Subnet Mask** – Determines which portion of an IP address identifies the network and which identifies the host.
-- **Network Address** – The first address in a subnet; identifies the network itself and cannot be assigned to a device.
-- **Broadcast Address** – The last address in a subnet; used to send data to all devices in that subnet.
-- **Host Address** – Any usable IP address assigned to a device within a subnet.
-- **Default Gateway** – The router address that allows devices to communicate outside their local network.
-- **Public IPv4 Address** – Globally routable IP address assigned by an ISP.
-- **Private IPv4 Address** – IP address reserved for internal networks; not routable on the internet.
-- **Binary** – Base-2 numbering system (0s and 1s) used to represent IP addresses at the lowest level.
-- **Octet** – One 8-bit section of an IPv4 address (0–255).
 
 ---
 
 ## Module 9 — IPv4 and Network Segmentation
-
-- **Unicast Transmission** – Refers to one device sending a message to one other device (one-to-one communication).
-
-- **Broadcast Transmission** – Refers to one device sending a message to all devices on a network (one-to-all communication).
-
-- **Multicast Transmission** – Refers to one device sending a message to a specific group of devices (one-to-many communication).
-
-- **Private IPv4 Addresses** – IP addresses reserved for internal networks that are not routable on the public internet.  
-  - 10.0.0.0 – 10.255.255.255  
-  - 172.16.0.0 – 172.31.255.255  
-  - 192.168.0.0 – 192.168.255.255  
-
-- **Loopback Address** – A special IP address used by a device to refer to itself.  
-  - IPv4: 127.0.0.1  
-  Used for testing and troubleshooting.
-
-- **Link-Local Address** – An IP address automatically assigned when a device cannot obtain an IP from DHCP.  
-  - Range: 169.254.0.0 – 169.254.255.255  
-
-- **Automatic Private IP Addressing (APIPA)** – A feature in Windows that assigns a link-local address (169.254.x.x) when DHCP fails.
-
-- **Regional Internet Registries (RIRs)** – Organizations responsible for allocating IP addresses in specific geographic regions (e.g., ARIN, APNIC, RIPE NCC).
-
-- **RIR** -
-- **Address Resolution Protocol (ARP)** -
-- **Dynamic Host Configuration Protocol (DHCP)** -
-- **Subnetting** -
-- **Experimental Address** -
+- **Unicast** – One-to-one communication.
+- **Broadcast** – One-to-all communication.
+- **Multicast** – One-to-many group communication.
+- **Loopback Address** – 127.0.0.1; used to test the local device.
+- **Link-Local Address** – 169.254.x.x; assigned when DHCP fails.
+- **APIPA (Automatic Private IP Addressing)** – Windows feature that assigns link-local addresses.
+- **RIR (Regional Internet Registry)** – Allocates IP address ranges by region.
+- **ARP (Address Resolution Protocol)** – Maps IP addresses to MAC addresses.
+- **DHCP (Dynamic Host Configuration Protocol)** – Automatically assigns IP settings.
+- **Subnetting** – Dividing a network into smaller logical networks.
+- **Experimental Address Range** – 240.0.0.0 – 255.255.255.254; reserved for future use.
 
 ---
 
-## Module 10 - IPv6 Addressing Formats and Rules
-- **Dual Stack** -
-- **Tunneling** -
-- **Translation** -
-- **Hexadecimal Number System** - 
-- **IPv6 Addressing Format** - 
+## Module 10 — IPv6 Addressing
+- **Dual Stack** – Running IPv4 and IPv6 together.
+- **Tunneling** – Sending IPv6 traffic inside IPv4 packets.
+- **Translation** – Converting between IPv4 and IPv6.
+- **Hexadecimal** – Base-16 numbering system (0–9, A–F).
+- **IPv6 Address Format** – 128-bit address written in eight groups separated by colons.
 
 ---
 
-## Module 11 - Dynamic addressing with DHCP
-
-- **Static Address** -
-- **Dynamic Address** -
-- **DHCP** -
-- **DHCP Discover** -
-- **DHCP Offer** -
-- **DHCP Request** -
-- **DHCP Acknowledgement** -
-- **IP address** - This identifies the host on the network.
-- **Subnet Mask** - This is used to identify the network on which the host is connected.
-- **Default Gateway** - This identifies the networking device that the host uses to access the internet or another remote network.
-
---- 
-
-## Module 12 -
-
-## Miscellaneous
-### OSI Model (7 Layers)
-1. **Application** – User-facing network services (HTTP, FTP, SMTP)
-2. **Presentation** – Formatting, encryption, and compression
-3. **Session** – Session setup, management, and termination
-4. **Transport** – End-to-end communication and reliability (TCP/UDP)
-5. **Network** – Logical addressing and routing (IP)
-6. **Data Link** – Framing, MAC addressing, and error detection
-7. **Physical** – Transmission of raw bits over media
+## Module 11 — Dynamic Addressing with DHCP
+- **Static Address** – Manually assigned IP address.
+- **Dynamic Address** – Automatically assigned IP address.
+- **DHCP Discover** – Client searches for DHCP server.
+- **DHCP Offer** – Server offers IP configuration.
+- **DHCP Request** – Client requests offered address.
+- **DHCP Acknowledgement (ACK)** – Server confirms assignment.
 
 ---
 
-### TCP/IP Model (4 Layers)
-1. **Application** – Network services and applications
-2. **Transport** – Host-to-host communication (TCP/UDP)
-3. **Internet** – Logical addressing and routing (IP)
-4. **Network Access** – Physical transmission and local delivery
+## Module 12 — Gateways to Other Networks
+- **Network Boundary** – Point where two networks connect.
+- **NAT (Network Address Translation)** – Converts private IPs to public IPs.
 
 ---
 
-### OSI vs TCP/IP Layer Mapping
-- **OSI Layers 7–5** → TCP/IP **Application**
-- **OSI Layer 4** → TCP/IP **Transport**
-- **OSI Layer 3** → TCP/IP **Internet**
-- **OSI Layers 2–1** → TCP/IP **Network Access**
+## Module 13 — The ARP Process
+- **Physical Address (MAC Address)** – Used within the same local network.
+- **Logical Address (IP Address)** – Used across networks.
+- **Layer 2 Frame** – Data unit at the Data Link layer.
+- **Layer 3 Packet** – Data unit at the Network layer.
+- **ICMPv6 Neighbor Discovery (ND)** – IPv6 method for resolving MAC addresses.
+- **Ethernet Broadcast** – Frame sent to all devices in a broadcast domain.
+
+---
+
+## Module 14 — Routing Between Networks
+- **Routing** – Forwarding packets between networks.
+- **Routing Table** – List of paths used to forward traffic.
+- **LAN (Local Area Network)** – Network within a limited area.
+
+---
+
+## Module 15 — TCP and UDP
+- **TCP (Transmission Control Protocol)** – Reliable, connection-oriented protocol.
+- **UDP (User Datagram Protocol)** – Fast, connectionless protocol.
+- **Port Number** – Identifies a specific service.
+- **Three-Way Handshake** – TCP connection setup (SYN, SYN-ACK, ACK).
+- **Flow Control** – Regulates data transmission rate.
+
+---
+
+## OSI Model (7 Layers)
+1. Application  
+2. Presentation  
+3. Session  
+4. Transport  
+5. Network  
+6. Data Link  
+7. Physical  
+
+---
+
+## TCP/IP Model (4 Layers)
+1. Application  
+2. Transport  
+3. Internet  
+4. Network Access  
+
+---
+
+## OSI vs TCP/IP Mapping
+- OSI 7–5 → TCP/IP Application  
+- OSI 4 → TCP/IP Transport  
+- OSI 3 → TCP/IP Internet  
+- OSI 2–1 → TCP/IP Network Access  
 
 ---
 
 ![RFC 1918](./screenshots/RFC%201918%20Private%20address%20Range.png)
+
+---
 
 ## Resources
 - [Network Access Layer: Introduction — Rick Graziani](https://www.youtube.com/watch?v=k1AC96Ppuzc&list=PLMLm7-g0V0ke_dSguEQfz-ZSHrSUikTJ7)

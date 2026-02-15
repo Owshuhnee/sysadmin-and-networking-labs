@@ -1,4 +1,4 @@
-## NetAcad Progress Summary
+## Cisco Networking Basics - Progress Summary
 
 | Module | Score |
 |------|-------|
@@ -11,11 +11,16 @@
 | Module 6 | 100% |
 | Module 7 | 100% |
 | Checkpoint Exam 2 | 71% |
-| Module 8 | — |
-| Module 9 | — |
-| Module 10 | — |
-| Module 11 | — |
-| Module 12 | — |
+| Module 8 | 73% |
+| Module 9 | 73% |
+| Module 10 | 91% |
+| Module 11 | 82% |
+| Checkpoint Exam 3 | 90% |
+| Module 12 | 91% |
+| Module 13 | 83% |
+| Module 14 | 75% |
+| Checkpoint Exam 4 | % |
+| Module 15 | % |
 
 ---
 
@@ -29,21 +34,18 @@ Each screenshot includes:
 ---
 
 ## Module 1 — 82%
-
 ![Module 1 — Question 4](./screenshots/M1Q4.png)  
 ![Module 1 — Question 10](./screenshots/M1Q10.png)
 
 ---
 
 ## Module 2 — 80%
-
 ![Module 2 — Question 6](./screenshots/M2Q6.png)  
 ![Module 2 — Question 10](./screenshots/M2Q10.png)
 
 ---
 
 ## Module 3 — 73%
-
 ![Module 3 — Question 1](./screenshots/M3Q1.png)  
 ![Module 3 — Question 6](./screenshots/M3Q6.png)  
 ![Module 3 — Question 7](./screenshots/M3Q7.png)
@@ -51,19 +53,16 @@ Each screenshot includes:
 ---
 
 ## Module 4 — 90%
-
 ![Module 4 — Question 2](./screenshots/M4Q2.png)
 
 ---
 
 ## Checkpoint Exam: Build a small network — 85%
-
 ![Checkpoint Result](./screenshots/CP1Result.png)
 
 ---
 
 ## Module 5 — 70%
-
 ![Module 5 — Question 1](./screenshots/M5Q1.png)  
 ![Module 5 — Question 8](./screenshots/M5Q8.png)  
 ![Module 5 — Question 10](./screenshots/M5Q10.png)
@@ -87,7 +86,6 @@ No incorrect answers recorded.
 ---
 
 ## Checkpoint Exam: Network Access - 71%
-
 ![Checkpoint Result](./screenshots/CP2Result.png) 
 
 ---
@@ -107,13 +105,11 @@ No incorrect answers recorded.
 ---
 
 ## Module 10 - 91%
-
 ![Module 10 — Question 11](./screenshots/M7Q11.png)
 
 ---
 
 ## Module 11 - 82%
-
 ![Module 11 — Question 3](./screenshots/M11Q3.png)
 ![Module 11 — Question 10](./screenshots/M11Q10.png)
 
@@ -124,9 +120,28 @@ No incorrect answers recorded.
 
 ---
 
-## Module 12 -
-## Module 13 -
-## Module 14 -
+## Module 12 - 91%
+![Module 12 — Question 4](./screenshots/M12Q4.png)
+
+--- 
+
+## Module 13 - 83%
+![Module 13 — Question 4](./screenshots/M13Q4.png)
+![Module 13 — Question 10](./screenshots/M13Q10.png)
+
+---
+
+## Module 14 - 75%
+![Module 13 — Question 4](./screenshots/M13Q4.png)
+![Module 13 — Question 10](./screenshots/M13Q10.png)
+
+---
+
+## Checkpoint Exam: Communication Between Networks
+![Checkpoint Result](./screenshots/CP4Result.png)
+
+---
+
 ## Module 15 -
 ## Module 16 -
 ## Module 17 -
