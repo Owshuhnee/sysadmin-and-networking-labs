@@ -19,8 +19,10 @@
 | Module 12 | 91% |
 | Module 13 | 83% |
 | Module 14 | 75% |
-| Checkpoint Exam 4 | % |
-| Module 15 | % |
+| Checkpoint Exam 4 | 95% |
+| Module 15 | 82% |
+| Module 16 | 91% |
+| Module 17 | 91% |
 
 ---
 
@@ -132,15 +134,26 @@ No incorrect answers recorded.
 ---
 
 ## Module 14 - 75%
-![Module 13 — Question 4](./screenshots/M13Q4.png)
-![Module 13 — Question 10](./screenshots/M13Q10.png)
+![Module 14 — Question 1](./screenshots/M14Q1.png)
+![Module 14 — Question 4](./screenshots/M14Q4.png)
+![Module 14 — Question 9](./screenshots/M14Q9.png)
 
 ---
 
-## Checkpoint Exam: Communication Between Networks
+## Checkpoint Exam: Communication Between Networks - 95%
 ![Checkpoint Result](./screenshots/CP4Result.png)
 
 ---
+
+## Module 15 - 82%
+![Module 15 — Question 1](./screenshots/M15Q1.png)
+![Module 15 — Question 2](./screenshots/M15Q2.png)
+
+---
+## Module 16 - 91%
+![Module 16 — Question 10](./screenshots/M16Q10.png)
+
+
 
 ## Module 15 -
 ## Module 16 -

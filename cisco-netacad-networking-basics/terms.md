@@ -148,13 +148,78 @@ This document contains brief definitions of key terms from the
 ---
 
 ## Module 15 — TCP and UDP
-- **TCP (Transmission Control Protocol)** – Reliable, connection-oriented protocol.
-- **UDP (User Datagram Protocol)** – Fast, connectionless protocol.
-- **Port Number** – Identifies a specific service.
-- **Three-Way Handshake** – TCP connection setup (SYN, SYN-ACK, ACK).
-- **Flow Control** – Regulates data transmission rate.
+
+- **Transport Layer Protocols** – Protocols responsible for end-to-end communication between hosts.
+
+- **TCP (Transmission Control Protocol)** – Reliable, connection-oriented protocol that ensures data is delivered in order using acknowledgements and sequence numbers.
+
+- **UDP (User Datagram Protocol)** – Fast, connectionless protocol used for streaming and real-time communication. No acknowledgements and no guaranteed delivery.
+
+- **Port Number** – Identifies a specific application or service on a device.
+  - **Well-known ports (0–1023)** – Reserved for common services (e.g., HTTP 80, HTTPS 443).
+  - **Registered ports (1024–49151)** – Assigned to user processes or applications.
+  - **Private/Dynamic ports (49152–65535)** – Used temporarily by client applications.
+
+- **Three-Way Handshake** – TCP connection setup process:
+  - SYN  
+  - SYN-ACK  
+  - ACK  
+
+- **Flow Control** – Regulates the rate of data transmission to prevent overwhelming the receiver.
+
+- **Socket Pair** – Combination of source IP + source port and destination IP + destination port that uniquely identifies a connection.
+
+- **Segment** – The data unit used at the Transport layer (TCP/UDP).
+
+- **netstat** – Command-line tool used to display active network connections and listening ports.
+
+![Well Known Ports](./screenshots/well-known-ports.png)
 
 ---
+
+## Module 16 — Application Layer Services
+
+### Client-Server Relationship
+A client (e.g., web browser) sends a request to a server.  
+Example process:
+1. DNS lookup converts the URL into an IP address.
+2. A TCP connection is established (socket created).
+3. The server receives the request on the correct port (e.g., 80 for HTTP).
+4. The server processes the request and sends a response.
+
+
+- **Uniform Resource Identifier (URI)** - A general identifier for a resource on the internet.
+- **URL (Uniform Resource Locator)** – Specifies the location of a resource.
+- **URN (Uniform Resource Name)** – Identifies a resource by name without specifying its location.
+
+**Parts of a URI**
+Example: https://example.com/docs/index.html#section1
+
+- **Scheme/Protocol** – `https`
+- **Hostname** – `www.example.com`
+- **Path** – `/docs/index.html`
+- **Fragment** – `#section1`
+
+---
+
+### Common Application Layer Protocols
+
+- **DNS (Domain Name System)** – Resolves domain names to IP addresses.
+- **nslookup** – Tool used to query DNS servers.
+- **HTTP (Hypertext Transfer Protocol)** – Transfers web pages.
+- **HTML (Hypertext Markup Language)** – Structure of web pages.
+- **FTP (File Transfer Protocol)** – Transfers files between systems.
+- **Telnet** – Remote login protocol (unencrypted).
+- **SSH (Secure Shell)** – Secure remote login protocol.
+- **SMTP (Simple Mail Transfer Protocol)** – Sends email.
+- **POP3 (Post Office Protocol v3)** – Retrieves email from a server.
+- **IMAP4 (Internet Message Access Protocol v4)** – Accesses email while keeping it on the server.
+- **VoIP (Voice over Internet Protocol)** – Voice communication over IP networks.
+
+![Common Servers](./screenshots/common%20servers.png)
+
+
+
 
 ## OSI Model (7 Layers)
 1. Application  
@@ -176,10 +241,10 @@ This document contains brief definitions of key terms from the
 ---
 
 ## OSI vs TCP/IP Mapping
-- OSI 7–5 → TCP/IP Application  
-- OSI 4 → TCP/IP Transport  
+- OSI 7–5 → TCP/IP 1 - Application  
+- OSI 4 → TCP/IP 4 - Transport  
 - OSI 3 → TCP/IP Internet  
-- OSI 2–1 → TCP/IP Network Access  
+- OSI 2–1 → TCP/IP 4 - Network Access  
 
 ---
 
