@@ -22,8 +22,9 @@
 | Checkpoint Exam 4 | 95% |
 | Module 15 | 82% |
 | Module 16 | 91% |
-| Module 17 | 91% |
-
+| Module 17 | 100% |
+| Checkpoint Exam 5 | % |
+| Networking Basics Course Final Exam | % |
 ---
 
 ## Areas Needing Improvement
@@ -72,7 +73,6 @@ Each screenshot includes:
 ---
 
 ## Module 6 — 100%
-
 No incorrect answers recorded.
 
 ---
@@ -150,11 +150,12 @@ No incorrect answers recorded.
 ![Module 15 — Question 2](./screenshots/M15Q2.png)
 
 ---
+
 ## Module 16 - 91%
 ![Module 16 — Question 10](./screenshots/M16Q10.png)
 
+---
 
+## Module 17 - 100%
+No incorrect answers recorded.
 
-## Module 15 -
-## Module 16 -
-## Module 17 -

@@ -202,6 +202,17 @@ Example: https://example.com/docs/index.html#section1
 
 ---
 
+## Module 17 — Network Testing Utilities
+Some of the available utilities include:
+
+- ipconfig - Displays IP configuration information. 
+  - /all /renew /release 
+- ping - Tests connections to other IP hosts.
+- netstat - Displays network connections.
+- tracert - Displays the route taken to the destination.
+- nslookup - Directly queries the name server for information on a destination domain.
+- echo request and echo reply
+
 ### Common Application Layer Protocols
 
 - **DNS (Domain Name System)** – Resolves domain names to IP addresses.
