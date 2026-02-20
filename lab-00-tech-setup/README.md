@@ -57,10 +57,6 @@ This approach aligns with real-world industry practice where virtualization is c
 
 - **Hypervisor:** Oracle VirtualBox
 
-### Guest System
-
-- **Linux OS:** Ubuntu Server 24.04 LTS
-
 ---
 
 ## Software Installed
