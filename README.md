@@ -33,6 +33,10 @@ Each training module includes:
 
 ## Linux Labs
 
+### Lab 0 - My Tech Stack and Setup
+- Setup 1: Windows 11 + VirtualBox + Lab focused storage
+- Setup 2: Cisco Packet Tracer
+
 ### Lab 1 — Virtualization Fundamentals
 - Task 1 — Create a Server VM (Ubuntu Server) using VirtualBox
 

@@ -1,0 +1,1 @@
+After configuring my Laptop -  Lenovo Yoga Pro 7 to dual boot Linux Mint and Windows 11. I had some problems with wifi or internet connection with Windows 11 which I had to troubleshoot. I cant fix it. So I had to revert back to Windows 11 only as main OS. Then use VirtualBox to run the VM Labs. 
