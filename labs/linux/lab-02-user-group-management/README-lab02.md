@@ -4,8 +4,7 @@
 - **Category:** System Administration
 - **Subdomain:** Linux Administration
 - **Difficulty:** Beginner
-- **Status:** Completed
-- **Estimated Time:** 2–3 hours
+- **Status:** Completed 2026-02-21
 
 ---
 
@@ -55,62 +54,97 @@ getent group interns
 ---
 
 ### Task 2 — Create Users
-Users were created to simulate role-based accounts.
 
-- jove (by default will be admin or full sudo access)
+Users were created to simulate role-based accounts within the system.
+
 - dev-user
 - intern-user
 - qa-user
 
-Each user was assigned a home directory and login shell.
+The `useradd` command was used with the `-m` option to create a home directory and the `-s` option to assign the default login shell (`/bin/bash`). Passwords were then configured using the `passwd` command.
+
+User creation was verified using the `id` command to confirm account existence and group information.
 
 ```bash
-sudo useradd -m -s /bin/bash <username> - add the user -m -s means
-sudo passwd <username> - this means
+sudo useradd -m -s /bin/bash dev-user
+sudo useradd -m -s /bin/bash qa-user
+sudo useradd -m -s /bin/bash intern-user
 
+sudo passwd dev-user
+sudo passwd qa-user
+sudo passwd intern-user
+
+id dev-user
+id qa-user
+id intern-user
 ```
 **Evidence:**
-- [02-create-users](./screenshots/02-create-users.png)
+![02-create-users](./screenshots/02-create-users.png)
 
+---
 
 ### Task 3 — Assign Users to Groups
-Users were assigned to their respective groups.
+
+Users were assigned to their respective role-based groups using the `usermod` command.
+
+The `-aG` option appends the user to a supplementary group without removing existing group memberships.
+
+Group membership was verified using the `id` command.
 
 ```bash
-sudo usermod -aG admins jove-admin
-sudo usermod -aG developers jove-dev
-id jove-admin
-id jove-dev
+sudo usermod -aG developers dev-user
+sudo usermod -aG qa qa-user
+sudo usermod -aG interns intern-user
+
+id dev-user
+id qa-user
+id intern-user
 ```
 
 **Evidence:**
-- [03-assign-users-to-groups](./screenshots/03-assign-users-to-groups.png)
+![03-assign-users-to-groups](./screenshots/03-assign-users-to-groups.png)
 
+---
 
 ### Task 4 — Configure & Validate Sudo Access
-Sudo access was granted only to the admins group using a dedicated sudoers file.
+
+Sudo access was granted **only** to the `admins` group using a dedicated sudoers file in `/etc/sudoers.d/`.  
+An admin account (`admin-user`) was created and added to the `admins` group to simulate role-based administrative access.
+
+A configuration check was performed using `visudo -c` to validate sudoers syntax and prevent lockout. During validation, a warning appeared because the sudoers file permissions were not set to **0440**. This was fixed by setting the file owner to `root:root` and permissions to `0440`.
 
 ```bash
+# Create admin user and set password
+sudo useradd -m -s /bin/bash admin-user
+sudo passwd admin-user
+
+# Create admins group (if not already created) and add user to it
+sudo groupadd admins
+sudo usermod -aG admins admin-user
+
+# Create sudoers rule for admins group
 sudo visudo -f /etc/sudoers.d/admins
-sudo chmod 440 /etc/sudoers.d/admins
+# Add this line inside the file:
+# %admins ALL=(ALL:ALL) ALL
+
+# Validate sudoers configuration
+sudo visudo -c
+
+# Fix sudoers file ownership and permissions (required: 0440)
+sudo chown root:root /etc/sudoers.d/admins
+sudo chmod 0440 /etc/sudoers.d/admins
+
+# Re-validate after the fix
 sudo visudo -c
 ```
 
 **Evidence:**
-- [04-sudoers-admins-config](./screenshots/04-sudoers-admins-config.png)
-- [05-sudoers-validate-visudo](./screenshots/05-sudoers-validate-visudo.png)
-- [06-remove-admin-access](./screenshots/06-remove-admin-access.png)
+![04-create-admin-user](./screenshots/04-create-admin-user.png)
+![05-sudoers-admins-config](./screenshots/05-sudoers-admins-config.png)
+![06-validate-fix-sudo](./screenshots/06-validate-fix-sudo.png)
 
-During validation, a misconfiguration was identified where the jove-dev user had unintentionally inherited administrative privileges through group membership.
-The issue was corrected by removing the user from the privileged group:
 
-```bash
-sudo gpasswd -d jove-dev admins
-```
-
-- jove-admin has sudo access
-- jove-dev has no sudo privileges
-
+---
 
 ### Task 5 - Shared Directory with Group-Based Access (setgid)
 A shared directory was created to allow collaborative access for the developers group while preventing access by non-members.
