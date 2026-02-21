@@ -27,28 +27,46 @@ The goal is to demonstrate how administrative access is controlled through group
 ## Tasks Performed
 
 ### Task 1 — Create Groups
-Role-based groups were created to separate administrative and non-administrative users.
+
+Groups were created to represent different organizational roles within the system.
+
+- admins
+- developers
+- qa
+- interns
+
+The `groupadd` command was used to create each group, and `getent group` was used to verify successful creation.
 
 ```bash
 sudo groupadd admins
 sudo groupadd developers
+sudo groupadd qa
+sudo groupadd interns
+
 getent group admins
 getent group developers
+getent group qa
+getent group interns
 ```
-**Evidence:**
-- [01-create-verify-groups](./screenshots/01-create-verify-groups.png)
 
+**Evidence:**
+![01-create-verify-groups](./screenshots/01-create-verify-groups.png)
+
+---
 
 ### Task 2 — Create Users
-Two users were created to represent different roles.
-- jove-admin → administrative role
-- jove-dev → standard (non-admin) role
+Users were created to simulate role-based accounts.
+
+- jove (by default will be admin or full sudo access)
+- dev-user
+- intern-user
+- qa-user
+
+Each user was assigned a home directory and login shell.
 
 ```bash
-sudo useradd -m -s /bin/bash jove-admin
-sudo useradd -m -s /bin/bash jove-dev
-sudo passwd jove-admin
-sudo passwd jove-dev
+sudo useradd -m -s /bin/bash <username> - add the user -m -s means
+sudo passwd <username> - this means
 
 ```
 **Evidence:**

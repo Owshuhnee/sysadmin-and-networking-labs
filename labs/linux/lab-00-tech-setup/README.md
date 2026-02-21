@@ -92,3 +92,97 @@ EFI | Disabled |
 ## Storage Strategy
 
 The external **Crucial MX500 SSD** is used as dedicated lab storage.
+
+---
+
+## Tasks Performed
+
+### 1. Reinstalled Windows 11 (Clean Installation)
+
+- Removed previous dual-boot configuration
+- Installed Windows 11 as single OS
+- Updated drivers and system packages
+
+### 2. Installed VirtualBox
+
+- Installed Oracle VirtualBox
+- Installed Extension Pack
+- Verified virtualization support in BIOS
+
+### 3. Created Ubuntu Server Virtual Machine
+
+- Created VM with custom hardware configuration
+- Mounted Ubuntu Server ISO
+- Installed OS manually
+- Configured user credentials
+
+### 4. Verified Environment
+
+To confirm the environment works correctly:
+
+- Repeated tasks from **Lab 02 (Linux Users & Groups)**
+- Confirmed:
+  - User creation
+  - Group management
+  - Permissions
+  - Sudo access
+
+This validated the VM environment is stable and functional.
+
+---
+
+
+## Challenges Encountered
+
+### Issue: Windows Wi-Fi instability after dual-boot
+
+**Symptoms:**
+
+- Slow internet speeds
+- Disconnections
+- Network errors
+- Driver inconsistencies
+
+**Resolution:**
+
+- Removed Linux dual-boot
+- Reinstalled Windows cleanly
+- Switched to virtualization approach
+
+---
+
+## Security Considerations
+
+- Virtual machines provide isolation from host system
+- Snapshots allow safe experimentation
+- External storage allows backup separation
+- Reduced risk compared to modifying host partitions
+
+---
+
+## Reflection
+
+The initial plan to use a dual-boot configuration introduced unexpected system instability, particularly affecting network performance on Windows 11. Troubleshooting consumed significant time with limited results.
+
+Reverting to a **Windows-only host with virtualization** proved to be a more efficient and stable approach.
+
+This experience reinforced an important real-world lesson:
+
+> Stability and reliability are more valuable than theoretical optimization.
+
+Virtualization provides flexibility, safety, and faster recovery, making it ideal for learning environments.
+
+---
+
+## Next Steps
+
+Resume:
+Lab 03 - Linux Networking
+Cisco Networking Academy - Networking basics
+Practice Simulations with Cisco packet tracer
+
+---
+
+## Status
+
+Environment successfully prepared and validated ✅
