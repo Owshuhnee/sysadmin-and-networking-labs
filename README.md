@@ -11,17 +11,11 @@ The goal of this repository is to build practical skills in:
 * Troubleshooting and incident response
 * Technical documentation using Markdown
 
-All labs are performed in a controlled virtual environment using:
-
-**Windows 11 Host + Oracle VirtualBox + Guest Operating Systems**
-
 ---
 
 # Repository Structure
 
 ## Labs
-
-
 
 The `labs/` directory contains hands-on technical exercises organized by platform:
 
@@ -43,34 +37,38 @@ Each lab includes:
 * Security considerations
 * Reflection and lessons learned
 
----
+## Lab Environment
+
+* Host OS: Windows 11
+* Hypervisor: Oracle VirtualBox
+* Guest OS: 
+  - Ubuntu Server LTS
+* Storage: Dedicated external SSD (MX500)
 
 ## Progress
 
 | Lab | Status |
 |-----|--------|
 Lab 00 — Tech Setup | ✅ Complete |
-Lab 01 — Virtualization | 🔄 Rebuilding |
+Lab 01 — Virtualization | ✅ Complete |
 Lab 02 — User & Group Management | 🔄 Rebuilding |
 Lab 03 — Linux Networking | ⏳ In Progress |
 Lab 04 — Services & Process Management | 📌 Planned |
 Lab 05 — Security Hardening | 📌 Planned |
 
----
-
 ## Current Labs
 
 ### Linux
 
-* **Lab 00 — Tech Stack & Environment Setup**
+* **[Lab 00 — Tech Stack & Environment Setup](labs\linux\lab-00-tech-setup\README.md)**
 
   * Windows 11 + VirtualBox + Dedicated Lab Storage
 
-* **Lab 01 — Virtualization Fundamentals**
+* **[Lab 01 — Virtualization Fundamentals](labs\linux\lab-01-virtualization\README.md)**
 
   * Creating and configuring an Ubuntu Server virtual machine
 
-* **Lab 02 — Linux User & Group Management**
+* **[Lab 02 — Linux User & Group Management](labs\linux\lab-02-user-group-management\README.md)**
   Core tasks:
 
   * Creating groups
@@ -91,9 +89,7 @@ Lab 05 — Security Hardening | 📌 Planned |
 
 The `scenarios/` directory contains realistic scenarios that simulate real-world administrative tasks and troubleshooting situations.
 
-Example:
-
-* Scenario 01 — Linux Role & Permission Incident Response
+* [Scenario 01 — Linux Role & Permission Incident Response](scenarios\scenario-01-linux-role-permission-incident)
 
 ---
 
@@ -103,27 +99,16 @@ The `training/` directory contains notes and results from structured learning pr
 
 Current training:
 
-* Cisco Networking Academy — Networking Basics *(Ongoing)*
+[Cisco Networking Academy — Networking Basics](training\training-01-cisco-networking-basics\README.md) (Ongoing)
 
 ---
 
 ## Reference Materials
 
-The `reference/` directory contains reusable notes created during labs and training.
+The `reference/` directory contains reusable notes created during labs and training. 
 
-Examples:
-
-* Linux commands reference
-* Linux glossary
-
----
-
-## Lab Environment
-
-* Host OS: Windows 11
-* Hypervisor: Oracle VirtualBox
-* Guest OS: Ubuntu Server LTS
-* Storage: Dedicated external SSD (MX500)
+* [Linux commands](reference\linux-commands.md)
+* [Linux glossary](reference\linux-glossary.md)
 
 ---
 

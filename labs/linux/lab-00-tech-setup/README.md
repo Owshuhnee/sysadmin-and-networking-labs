@@ -1,4 +1,4 @@
-# Lab 00 — Technical Environment Setup
+# Lab 00 — Tech Stack & Environment Setup
 
 ## Lab Metadata
 
