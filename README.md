@@ -83,13 +83,18 @@ Lab 05 — Security Hardening | 📌 Planned |
 
 * **Lab 05 — Security Hardening** *(Planned)*
 
+
+### Networking
+
+* **[Cisco Lab 01](labs\networking\cisco-packet-tracer\README.md)**
+
 ---
 
 ## Scenario-Based Practice
 
 The `scenarios/` directory contains realistic scenarios that simulate real-world administrative tasks and troubleshooting situations.
 
-* [Scenario 01 — Linux Role & Permission Incident Response](scenarios\scenario-01-linux-role-permission-incident)
+* **[Scenario 01 — Linux Role & Permission Incident Response](scenarios\scenario-01-linux-role-permission-incident)**
 
 ---
 
@@ -99,7 +104,7 @@ The `training/` directory contains notes and results from structured learning pr
 
 Current training:
 
-[Cisco Networking Academy — Networking Basics](training\training-01-cisco-networking-basics\README.md) (Ongoing)
+* **[Cisco Networking Academy — Networking Basics](training\training-01-cisco-networking-basics\README.md) (Ongoing)**
 
 ---
 
