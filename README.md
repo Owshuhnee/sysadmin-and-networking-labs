@@ -60,15 +60,15 @@ Lab 05 — Security Hardening | 📌 Planned |
 
 ### Linux
 
-* **[Lab 00 — Tech Stack & Environment Setup](labs\linux\lab-00-tech-setup\README.md)**
+* **[Lab 00 - Tech Stack & Environment Setup](labs/linux/lab-00-tech-setup/README.md)**
 
   * Windows 11 + VirtualBox + Dedicated Lab Storage
 
-* **[Lab 01 — Virtualization Fundamentals](labs\linux\lab-01-virtualization\README.md)**
+* **[Lab 01 - Virtualization Fundamentals](labs/linux/lab-01-virtualization/README.md)**
 
   * Creating and configuring an Ubuntu Server virtual machine
 
-* **[Lab 02 — Linux User & Group Management](labs\linux\lab-02-user-group-management\README.md)**
+* **[Lab 02 - Linux User & Group Management](labs/linux/lab-02-user-group-management/README.md)**
   Core tasks:
 
   * Creating groups
@@ -86,7 +86,8 @@ Lab 05 — Security Hardening | 📌 Planned |
 
 ### Networking
 
-* **[Cisco Lab 01](labs\networking\cisco-packet-tracer\README.md)**
+* **[Cisco Lab 00 - Logical and Physical mode](labs/networking/cisco-packet-tracer/lab-00-logical-physical-mode.md)**
+* **[Cisco Lab 01 - Simple network](labs/networking/cisco-packet-tracer/lab-01-simple-network.md)**
 
 ---
 
@@ -94,7 +95,7 @@ Lab 05 — Security Hardening | 📌 Planned |
 
 The `scenarios/` directory contains realistic scenarios that simulate real-world administrative tasks and troubleshooting situations.
 
-* **[Scenario 01 — Linux Role & Permission Incident Response](scenarios\scenario-01-linux-role-permission-incident)**
+* **[Scenario 01 — Linux Role & Permission Incident Response](scenarios/scenario-01-linux-role-permission-incident/README-scenario01.md)**
 
 ---
 
@@ -104,7 +105,7 @@ The `training/` directory contains notes and results from structured learning pr
 
 Current training:
 
-* **[Cisco Networking Academy — Networking Basics](training\training-01-cisco-networking-basics\README.md) (Ongoing)**
+* **[Cisco Networking Academy — Networking Basics](training/training-01-cisco-networking-basics/README.md) (Ongoing)**
 
 ---
 
@@ -112,8 +113,8 @@ Current training:
 
 The `reference/` directory contains reusable notes created during labs and training. 
 
-* [Linux commands](reference\linux-commands.md)
-* [Linux glossary](reference\linux-glossary.md)
+* [Linux commands](reference/linux-commands.md)
+* [Linux glossary](reference/linux-glossary.md)
 
 ---
 
